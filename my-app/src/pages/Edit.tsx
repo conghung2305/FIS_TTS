@@ -105,7 +105,7 @@ const EditProduct: React.FC = () => {
         try {
             await axios.put(`http://localhost:5000/products/${id}`, updatedProduct);
             toast.success("Cập nhật sản phẩm thành công");
-            navigate('/products');
+            navigate('/');
         } catch (error) {
             console.error('Error updating product:', error);
             toast.error("Cập nhật sản phẩm không thành công");
@@ -173,7 +173,7 @@ const EditProduct: React.FC = () => {
                         rules={[{ required: true, message: 'Trạng thái là bắt buộc' }]}
                     >
                         <Select>
-                            <Option value="active">Active</Option>
+                       
                             <Option value="inactive">Inactive</Option>
                             <Option value="pending">Pending</Option>
                             <Option value="completed">Completed</Option>

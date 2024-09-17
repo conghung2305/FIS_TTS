@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Input, Table, Checkbox, Button, Select, Space, Form } from 'antd';
 import { SearchOutlined, FolderAddOutlined, EyeOutlined, FilterOutlined, PlusOutlined, DeleteOutlined, EditOutlined, SyncOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import { CheckOutlined, CloseOutlined, WarningOutlined, DiffOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 const { Option } = Select;
@@ -81,56 +82,93 @@ const MainComponent: React.FC = () => {
         {
             title: 'Mã ĐNMS',
             dataIndex: 'code',
+            render: (text: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined) => <span style={{ color: 'blue' }}>{text}</span>
         },
         {
             title: 'Đơn vị',
             dataIndex: 'unit',
         },
         {
-            render: () => <FolderAddOutlined />,
+            render: () => <DiffOutlined style={{ color: 'blue' }} />,
         },
     ];
 
     const dataRight = [
         { key: 1, code: 'PR.2023.0000010', unit: 'GGG-NH Gogi Tô Hiệu' },
-        { key: 2, code: 'PR.2023.0000009', unit: 'GGG-NH Gogi Nguyễn Chí Thanh' },
-        { key: 3, code: 'PR.2023.0000009', unit: 'GGG-NH Gogi Nguyễn Chí Thanh' },
-        { key: 4, code: 'PR.2023.0000009', unit: 'GGG-NH Gogi Nguyễn Chí Thanh' },
-        { key: 5, code: 'PR.2023.0000009', unit: 'GGG-NH Gogi Nguyễn Chí Thanh' },
+        { key: 2, code: 'PR.2023.0000008', unit: 'GGG-NH Gogi Nguyễn Chí Thanh' },
+        { key: 3, code: 'PR.2023.0000007', unit: 'GGG-NH Sumo Nguyễn Phong Sắc' },
+        { key: 4, code: 'PR.2023.0000006', unit: 'GGG-NH Sumo Nguyễn Thị Định' },
+        { key: 5, code: 'PR.2023.0000005', unit: 'GGG-NH Phòng kế hoạch và phát triển' },
 
     ];
 
     const columnsFooter = [
-        { title: 'Mã PAM#', dataIndex: 'id' },
+        {
+            title: 'Mã PAM#', dataIndex: 'id',
+            render: (id: string) => <span style={{ color: 'blue' }}>{id}</span>
+        },
+
         { title: 'Tên PAM', dataIndex: 'name' },
         { title: 'Người tạo', dataIndex: 'createdBy' },
-        { title: 'Ngày tạo', dataIndex: 'createAt' ,
+        {
+            title: 'Ngày tạo', dataIndex: 'createAt',
+            render: (createAt: Date) => (
+                <span>{new Date(createAt).toLocaleDateString('vi-VN')}</span>
+            ),
+        },
+        { title: 'Loại sự kiện', dataIndex: 'eventType' },
+        {
+            title: 'Ngày bắt đầu báo giá', dataIndex: 'startDate',
             render: (startDate: Date) => (
                 <span>{new Date(startDate).toLocaleDateString('vi-VN')}</span>
             ),
         },
-        { title: 'Loại sự kiện', dataIndex: 'eventType' },
-        { title: 'Ngày bắt đầu báo giá', dataIndex: 'startDate' },
-        { title: 'Ngày kết thúc báo giá', dataIndex: 'endDate',
+
+        {
+            title: 'Ngày kết thúc báo giá', dataIndex: 'endDate',
             render: (endDate: Date) => (
                 <span>{new Date(endDate).toLocaleDateString('vi-VN')}</span>
             ),
-         },
-        { title: 'Số lượng phản hồi', dataIndex: 'feedbackCount' },
+        },
+        {
+            title: 'Số lượng phản hồi', dataIndex: `feedbackCount`,
+            render: (feedbackCount: number) => `${feedbackCount} phản hồi`,
+        },
         {
             title: 'Trạng thái',
             dataIndex: 'status',
-            render: (status: string) => (
-                <>
-                    <SyncOutlined /> {status}
-                </>
-            ),
+            render: (status: string) => {
+                if (status === 'completed') {
+                    return (
+                        <>
+                            <CheckOutlined style={{ color: 'green' }} /> {status}
+                        </>
+                    );
+                } else if (status === 'pending') {
+                    return (
+                        <>
+                            <SyncOutlined style={{ color: 'blue' }} /> {status}
+                        </>
+                    );
+                } else if (status === 'inactive') {
+                    return (
+                        <>
+                            <WarningOutlined style={{ color: 'red' }}/> {status}
+                        </>
+                    )
+
+                }
+                else {
+                    return <>{status}</>;
+                }
+            },
         },
+
         {
             render: (_: any, record: any) => (
                 <Space>
                     <DeleteOutlined onClick={() => handleDelete(record.id)} />
-                    <Link to={`/products/edit/${record.id}`}>
+                    <Link to={`/edit/${record.id}`}>
                         <EditOutlined />
                     </Link>
                 </Space>
@@ -153,10 +191,8 @@ const MainComponent: React.FC = () => {
                             <Input placeholder='Search' prefix={<SearchOutlined />} />
                         </Form>
                     </div>
-
                     <Table columns={columnsLeft} dataSource={dataLeft} pagination={false} />
                 </div>
-
                 <div className='main-content-right'>
                     <span className='span'>Đề nghị mua</span>
                     <p>Tạo PAM cho một đề nghị</p>
@@ -173,14 +209,13 @@ const MainComponent: React.FC = () => {
                     <span className="span">Danh sách phương án mua</span>
                     <p>Danh sách các phương án mua (PAM) được tạo ra trên hệ thống mà người dùng được cấp quyền truy xuất</p>
                 </div>
-
                 <div className='main-footer-content'>
                     <div className='main-footer-content-left'>
                         <div className='main-eye'>
                             <div>
                                 <EyeOutlined />
                             </div>
-                            <div>
+                            <div >
                                 View:
                             </div>
                         </div>
@@ -197,7 +232,7 @@ const MainComponent: React.FC = () => {
                         <Space>
                             <SearchOutlined />
                             <FilterOutlined />
-                            <Link to="/products/add">
+                            <Link to="/add">
                                 <Button type='primary'>
                                     Tạo mới PAM <PlusOutlined />
                                 </Button>

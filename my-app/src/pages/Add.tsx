@@ -55,7 +55,7 @@ const AddProduct: React.FC = () => {
             };
             await axios.post('http://localhost:5000/products', newProduct);
             notification.success({ message: 'Product added successfully!' });
-            navigate('/products');
+            navigate('/');
             form.resetFields();
         } catch (error) {
             console.error('Error adding product:', error);

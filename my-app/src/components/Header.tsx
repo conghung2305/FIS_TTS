@@ -1,11 +1,7 @@
 import React from "react";
 import { Layout, Menu, Avatar, Space } from "antd";
 import { BellOutlined, SettingOutlined, UserOutlined, MenuOutlined, FolderOutlined } from '@ant-design/icons';
-
-
-
 const { Header } = Layout;
-
 const HeaderComponent: React.FC = () => {
     return (
         <Header className="header">
@@ -41,7 +37,6 @@ const HeaderComponent: React.FC = () => {
                             </Menu.Item>
                         </Menu>
                     </Space>
-
                 </div>
                 <div className='navright'>
                     <Space size="middle">

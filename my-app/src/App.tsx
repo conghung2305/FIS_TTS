@@ -11,15 +11,15 @@ import EditProduct from './pages/Edit';
 import 'react-toastify/dist/ReactToastify.css';
   const routesConfig = [
     {
-      path:"/products",
+      path:"/",
       element:<List/>
     },
     {
-      path:"/products/add",
+      path:"/add",
       element:<AddProduct/>
     },
     {
-      path:"/products/edit/:id",
+      path:"/edit/:id",
       element:<EditProduct/>
     },
 
