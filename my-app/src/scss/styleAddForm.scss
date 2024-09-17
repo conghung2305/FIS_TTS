@@ -1,0 +1,41 @@
+// AddProduct.scss
+
+.add-product-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-product-form {
+    display: flex;
+    flex-direction: column;
+
+    .ant-form-item {
+        margin-bottom: 15px;
+    }
+
+    .ant-form-item-label {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .ant-input,
+    .ant-select,
+    .ant-picker {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+    .ant-btn-primary {
+        padding: 10px;
+        font-size: 16px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+    }
+}

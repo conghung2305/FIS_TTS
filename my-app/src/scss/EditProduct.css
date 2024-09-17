@@ -1,0 +1,56 @@
+.edit-product-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.edit-product-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.edit-product-container .ant-form-item {
+  margin-bottom: 15px;
+}
+.edit-product-container .ant-form-item-label {
+  font-size: 16px;
+  color: #555;
+}
+.edit-product-container .ant-input,
+.edit-product-container .ant-select,
+.edit-product-container .ant-picker {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.edit-product-container .ant-btn-primary {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.edit-product-container .ant-btn-primary:hover {
+  background-color: #0062cc;
+}
+.edit-product-container .ant-input-number {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.edit-product-container .ant-picker {
+  width: 100%;
+}
+.edit-product-container .ant-select {
+  width: 100%;
+}
+.edit-product-container .ant-btn {
+  width: 100%;
+}/*# sourceMappingURL=EditProduct.css.map */
