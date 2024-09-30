@@ -15,7 +15,8 @@ $menu-active-bg: #333;
     color: $text-color;
     padding: 10px;
     width: 100%;
-
+    height: 50px;
+    line-height: 50px;
     .icon {
         padding-right: 0px;
         padding-left: 10px;
@@ -55,6 +56,7 @@ $menu-active-bg: #333;
             display: flex;
             position: absolute;
             top: -1px;
+            height: 50px;
 
             .ant-menu-item {
                 position: relative;
@@ -93,9 +95,10 @@ $menu-active-bg: #333;
     .navright {
         display: flex;
         align-items: center;
-        justify-content:flex-end;
-        .iconNav{
-            margin-bottom: 20px;
+        justify-content: flex-end;
+
+        .iconNav {
+            margin-bottom: 22px;
         }
     }
 }
