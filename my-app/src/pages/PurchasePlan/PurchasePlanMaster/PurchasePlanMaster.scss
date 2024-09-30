@@ -1,0 +1,158 @@
+$primary-color: #000;
+$secondary-color: #ffffff;
+$text-color: #ffffff;
+$hover-color: #2980b9;
+$btn-primary-bg: #ffffff;
+$btn-primary-text: #3498db;
+$btn-primary-hover-bg: #ecf0f1;
+$btn-secondary-bg: #fff;
+$third-color: #EEEEEE;
+$input-bg-color: #888888;
+$menu-active-bg: #333;
+
+.containerX {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow-x: hidden;
+    .main {
+        background-color: $third-color;
+        padding-bottom: 30px;
+        width: 100%;
+        .tieude {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .main_head {
+            padding: 15px 0px 10px 30px;
+        }
+        .main-content {
+            display: grid;
+            margin: 0 auto;
+            gap: 30px;
+            width: 95%;
+            padding-top: 15px;
+            grid-template-columns: 2.5fr 2fr;
+            background-color: $secondary-color;
+            box-shadow: 5px 4px 8px 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            .main-content-title {
+                margin-left: 10px;
+                padding-left: 10px;
+                .form-input-search {
+                    padding: 10px;
+                    width: 98%;
+                    background-color: #e0e0e0;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                    input {
+                        background-color: #e0e0e0; // Màu nền xám
+                        color: #888; // Màu chữ xám
+                        border: none; // Không có viền
+                        padding: 0; // Xóa khoảng trắng bên trong
+                        height: 20px;
+
+                        // Placeholder
+                        &::placeholder {
+                            color: #aaa; // Màu placeholder xám nhạt
+                        }
+
+                        // Biểu tượng prefix
+                        .ant-input-prefix {
+                            color: #e0e0e0; // Màu của icon xám
+                        }
+
+                        &:focus {
+                            background-color: #e0e0e0; // Màu nền khi focus
+                            box-shadow: none; // Không có viền nổi bật khi focus
+                        }
+                    }                 
+                    .ant-input-affix-wrapper {
+                        padding: 0;
+                        background-color: #e0e0e0;
+                        border: none;
+                        &:focus-within {
+                            border: none; // Bỏ viền khi focus vào input hoặc icon
+                            box-shadow: none; // Bỏ đổ bóng khi focus
+                        }
+                    }
+                }
+            }
+
+            .main-content-right {
+                .form-input-search {
+                    padding: 10px;
+                    width: 95%;
+                    background-color: #e0e0e0;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+
+                    input {
+                        background-color: #e0e0e0; // Màu nền xám
+                        color: #888; // Màu chữ xám
+                        border: none; // Không có viền
+                        padding: 0; // Xóa khoảng trắng bên trong
+                        height: 20px;
+
+                        // Placeholder
+                        &::placeholder {
+                            color: #aaa; // Màu placeholder xám nhạt
+                        }
+
+                        // Biểu tượng prefix
+                        .ant-input-prefix {
+                            color: #e0e0e0; // Màu của icon xám
+                        }
+
+                        &:focus {
+                            background-color: #e0e0e0; // Màu nền khi focus
+                            box-shadow: none; // Không có viền nổi bật khi focus
+                            border: none;
+                        }
+                    }
+
+                    // Xóa khoảng trắng xung quanh input
+                    .ant-input-affix-wrapper {
+                        padding: 0;
+                        background-color: #e0e0e0;
+                        border: none;
+
+                        &:focus-within {
+                            border: none; // Bỏ viền khi focus vào input hoặc icon
+                            box-shadow: none; // Bỏ đổ bóng khi focus
+                        }
+                    }
+                }
+            }
+
+            .main-content-left {
+                border-right: 1px solid;
+            }
+
+            .span {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+        table {
+            width: 100%;
+            border: none;
+            .id {
+                color: #0000FF;
+            }
+
+            .ant-table-cell {
+                padding: 5px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .ant-table-thead>tr>th {
+                background-color: #EEEEEE;
+                color: #000; // Màu văn bản của tiêu đề, có thể tùy chỉnh nếu cần
+            }
+        }
+    }
+}

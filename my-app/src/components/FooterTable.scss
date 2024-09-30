@@ -1,0 +1,77 @@
+$primary-color: #000;
+$secondary-color: #ffffff;
+$text-color: #ffffff;
+$hover-color: #2980b9;
+$btn-primary-bg: #ffffff;
+$btn-primary-text: #3498db;
+$btn-primary-hover-bg: #ecf0f1;
+$btn-secondary-bg: #fff;
+$third-color: #EEEEEE;
+$input-bg-color: #888888;
+$menu-active-bg: #333;
+
+.main-footer {
+    width: 95%;
+    margin: 0 auto;
+    box-shadow: 5px 4px 8px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 25px;
+    background-color: $secondary-color;
+    padding-left: 10px;
+    padding-top: 10px;
+    .span {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .main-footer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+        .main-footer-content-right {
+            display: flex;
+            justify-content: flex-end; // Đẩy nội dung sát vào lề phải
+            align-items: center; // Căn giữa nội dung theo chiều dọc
+        }
+
+       .ant-btn{
+            border-radius: 0;
+       }
+    }
+
+    .main-footer-content-left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 10px;
+
+        .main-eye {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+            margin-top: -2px;
+            gap: 5px;
+            .anticon-eye{
+                margin-top: 2px;
+            }
+        }
+
+        .ant-select {
+            .ant-select-selector {
+                color: blue;
+                border: none;
+                box-shadow: none;
+            }
+            .ant-select-item {
+                color: blue; // Màu văn bản của các item trong dropdown
+            }
+
+            .ant-select-item-option-content {
+                color: blue; // Màu văn bản của các option trong dropdown
+            }
+        }
+    }
+}

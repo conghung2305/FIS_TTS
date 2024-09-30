@@ -2,10 +2,10 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { Form, Input, Button, DatePicker, Select } from 'antd';
+import { Form, Input, Button, DatePicker, Select, notification } from 'antd';
 import moment from 'moment'; 
 import 'react-toastify/dist/ReactToastify.css';
-import '../scss/EditProduct.scss';
+import "../PurchasePlanDetails/PurchasePlanDetailsEdit.scss"
 interface Product {
     id: string;
     name: string;
@@ -18,7 +18,7 @@ interface Product {
     status: string;
 }
 const { Option } = Select;
-const EditProduct: React.FC = () => {
+const PurchasePlanDetailsEdit: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const [product, setProduct] = useState<Product | null>(null);
     const [form] = Form.useForm();
@@ -104,23 +104,25 @@ const EditProduct: React.FC = () => {
 
         try {
             await axios.put(`http://localhost:5000/products/${id}`, updatedProduct);
-            toast.success("Cập nhật sản phẩm thành công");
+           
+            notification.success({message:"Cập nhật sản phẩm thành công"})
             navigate('/');
         } catch (error) {
             console.error('Error updating product:', error);
-            toast.error("Cập nhật sản phẩm không thành công");
+            toast.error("Cập nhật sản phẩm thất bại");
         }
     };
 
     return (
         <div className="edit-product-container">
-            <h2>Edit Product</h2>
+      
             {product ? (
-                <Form
+                <Form className='edit-product-form'
                     form={form}
                     layout="vertical"
                     onFinish={handleSubmit}
                 >
+                          <h2>Edit Product</h2>
                     <Form.Item
                         label="Name"
                         name="name"
@@ -173,7 +175,6 @@ const EditProduct: React.FC = () => {
                         rules={[{ required: true, message: 'Trạng thái là bắt buộc' }]}
                     >
                         <Select>
-                       
                             <Option value="inactive">Inactive</Option>
                             <Option value="pending">Pending</Option>
                             <Option value="completed">Completed</Option>
@@ -191,6 +192,6 @@ const EditProduct: React.FC = () => {
         </div>
     );
 };
-export default EditProduct;
+export default PurchasePlanDetailsEdit;
 
 

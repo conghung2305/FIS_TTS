@@ -1,0 +1,56 @@
+.main-footer {
+  width: 95%;
+  margin: 0 auto;
+  box-shadow: 5px 4px 8px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 25px;
+  background-color: #ffffff;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.main-footer .span {
+  font-size: 20px;
+  font-weight: 500;
+}
+.main-footer .main-footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.main-footer .main-footer-content .main-footer-content-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.main-footer .main-footer-content .ant-btn {
+  border-radius: 0;
+}
+.main-footer .main-footer-content-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+.main-footer .main-footer-content-left .main-eye {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+  margin-top: -2px;
+  gap: 5px;
+}
+.main-footer .main-footer-content-left .main-eye .anticon-eye {
+  margin-top: 2px;
+}
+.main-footer .main-footer-content-left .ant-select .ant-select-selector {
+  color: blue;
+  border: none;
+  box-shadow: none;
+}
+.main-footer .main-footer-content-left .ant-select .ant-select-item {
+  color: blue;
+}
+.main-footer .main-footer-content-left .ant-select .ant-select-item-option-content {
+  color: blue;
+}/*# sourceMappingURL=FooterTable.css.map */

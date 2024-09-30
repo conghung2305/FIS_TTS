@@ -1,0 +1,101 @@
+$primary-color: #000;
+$secondary-color: #ffffff;
+$text-color: #ffffff;
+$hover-color: #2980b9;
+$btn-primary-bg: #ffffff;
+$btn-primary-text: #3498db;
+$btn-primary-hover-bg: #ecf0f1;
+$btn-secondary-bg: #fff;
+$third-color: #EEEEEE;
+$input-bg-color: #888888;
+$menu-active-bg: #333;
+
+.header {
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 10px;
+    width: 100%;
+
+    .icon {
+        padding-right: 0px;
+        padding-left: 10px;
+        position: relative;
+        top: -10px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        max-width: 100%;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        border-right: 1px solid;
+        padding-right: 15px;
+        height: 100%;
+
+        a {
+            color: $text-color;
+            text-decoration: none;
+        }
+    }
+
+    .nav {
+        a {
+            color: $text-color;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .menu {
+            background-color: #000 !important; // Nền đen
+            color: #fff !important; // Chữ trắng
+            display: flex;
+            position: absolute;
+            top: -1px;
+
+            .ant-menu-item {
+                position: relative;
+
+                &:hover,
+                &.ant-menu-item-selected {
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #007bff;
+                    }
+                }
+            }
+
+
+            .ant-menu-item-active,
+            .ant-menu-item-selected {
+                a {
+                    color: #fff; // Màu chữ khi mục được chọn
+                }
+            }
+        }
+
+        .logo {
+            color: #fff !important; // Màu logo
+            text-decoration: none;
+            position: relative;
+            top: -10px;
+        }
+    }
+
+    .navright {
+        display: flex;
+        align-items: center;
+        justify-content:flex-end;
+        .iconNav{
+            margin-bottom: 20px;
+        }
+    }
+}

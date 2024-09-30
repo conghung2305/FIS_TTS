@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout, Menu, Avatar, Space } from "antd";
 import { BellOutlined, SettingOutlined, UserOutlined, MenuOutlined, FolderOutlined } from '@ant-design/icons';
+import "./Header.scss";
 const { Header } = Layout;
 const HeaderComponent: React.FC = () => {
     return (

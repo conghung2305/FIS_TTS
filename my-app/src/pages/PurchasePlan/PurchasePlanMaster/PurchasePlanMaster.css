@@ -1,0 +1,130 @@
+.containerX {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+}
+.containerX .main {
+  background-color: #EEEEEE;
+  padding-bottom: 30px;
+  width: 100%;
+}
+.containerX .main .tieude {
+  font-size: 24px;
+  font-weight: 600;
+}
+.containerX .main .main_head {
+  padding: 15px 0px 10px 30px;
+}
+.containerX .main .main-content {
+  display: grid;
+  margin: 0 auto;
+  gap: 30px;
+  width: 95%;
+  padding-top: 15px;
+  grid-template-columns: 2.5fr 2fr;
+  background-color: #ffffff;
+  box-shadow: 5px 4px 8px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.containerX .main .main-content .main-content-title {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+.containerX .main .main-content .main-content-title .form-input-search {
+  padding: 10px;
+  width: 98%;
+  background-color: #e0e0e0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.containerX .main .main-content .main-content-title .form-input-search input {
+  background-color: #e0e0e0;
+  color: #888;
+  border: none;
+  padding: 0;
+  height: 20px;
+}
+.containerX .main .main-content .main-content-title .form-input-search input::-moz-placeholder {
+  color: #aaa;
+}
+.containerX .main .main-content .main-content-title .form-input-search input::placeholder {
+  color: #aaa;
+}
+.containerX .main .main-content .main-content-title .form-input-search input .ant-input-prefix {
+  color: #e0e0e0;
+}
+.containerX .main .main-content .main-content-title .form-input-search input:focus {
+  background-color: #e0e0e0;
+  box-shadow: none;
+}
+.containerX .main .main-content .main-content-title .form-input-search .ant-input-affix-wrapper {
+  padding: 0;
+  background-color: #e0e0e0;
+  border: none;
+}
+.containerX .main .main-content .main-content-title .form-input-search .ant-input-affix-wrapper:focus-within {
+  border: none;
+  box-shadow: none;
+}
+.containerX .main .main-content .main-content-right .form-input-search {
+  padding: 10px;
+  width: 95%;
+  background-color: #e0e0e0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.containerX .main .main-content .main-content-right .form-input-search input {
+  background-color: #e0e0e0;
+  color: #888;
+  border: none;
+  padding: 0;
+  height: 20px;
+}
+.containerX .main .main-content .main-content-right .form-input-search input::-moz-placeholder {
+  color: #aaa;
+}
+.containerX .main .main-content .main-content-right .form-input-search input::placeholder {
+  color: #aaa;
+}
+.containerX .main .main-content .main-content-right .form-input-search input .ant-input-prefix {
+  color: #e0e0e0;
+}
+.containerX .main .main-content .main-content-right .form-input-search input:focus {
+  background-color: #e0e0e0;
+  box-shadow: none;
+  border: none;
+}
+.containerX .main .main-content .main-content-right .form-input-search .ant-input-affix-wrapper {
+  padding: 0;
+  background-color: #e0e0e0;
+  border: none;
+}
+.containerX .main .main-content .main-content-right .form-input-search .ant-input-affix-wrapper:focus-within {
+  border: none;
+  box-shadow: none;
+}
+.containerX .main .main-content .main-content-left {
+  border-right: 1px solid;
+}
+.containerX .main .main-content .span {
+  font-size: 20px;
+  font-weight: 500;
+}
+.containerX .main table {
+  width: 100%;
+  border: none;
+}
+.containerX .main table .id {
+  color: #0000FF;
+}
+.containerX .main table .ant-table-cell {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.containerX .main table .ant-table-thead > tr > th {
+  background-color: #EEEEEE;
+  color: #000;
+}/*# sourceMappingURL=PurchasePlanMaster.css.map */

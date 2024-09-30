@@ -1,26 +1,25 @@
 
 import { ToastContainer, toast } from 'react-toastify';
 import './App.css';
-import './scss/style.css'
-// src/index.js hoặc src/App.js
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useRoutes } from 'react-router-dom';
-import List from './pages/List';
-import AddProduct from './pages/Add';
-import EditProduct from './pages/Edit';
+
 import 'react-toastify/dist/ReactToastify.css';
+import PurchaseMater from './pages/PurchasePlan/PurchasePlanMaster/PurchasePlanMaster';
+import PurchasePlanDetailsAdd from './pages/PurchasePlan/PurchasePlanDetails/PurchasePlanDetailsAdd';
+import PurchasePlanDetailsEdit from './pages/PurchasePlan/PurchasePlanDetails/PurchasePlanDetailsEdit';
   const routesConfig = [
     {
       path:"/",
-      element:<List/>
+      element:<PurchaseMater/>
     },
     {
       path:"/add",
-      element:<AddProduct/>
+      element:<PurchasePlanDetailsAdd/>
     },
     {
       path:"/edit/:id",
-      element:<EditProduct/>
+      element:<PurchasePlanDetailsEdit/>
     },
 
   ]
@@ -30,8 +29,6 @@ function App() {
       {routes}
       <ToastContainer autoClose={3000} newestOnTop={true}/>
     </main>;
-   
-
 }
 export default App;
 
