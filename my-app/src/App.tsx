@@ -6,8 +6,7 @@ import { useRoutes } from 'react-router-dom';
 
 import 'react-toastify/dist/ReactToastify.css';
 import PurchaseMater from './pages/PurchasePlan/PurchasePlanMaster/PurchasePlanMaster';
-import PurchasePlanDetailsAdd from './pages/PurchasePlan/PurchasePlanDetails/PurchasePlanDetailsAdd';
-import PurchasePlanDetailsEdit from './pages/PurchasePlan/PurchasePlanDetails/PurchasePlanDetailsEdit';
+import PurchasePlanDetailsAddEdit from './pages/PurchasePlan/PurchasePlanDetails/PurchasePlanDetailsAdd';
   const routesConfig = [
     {
       path:"/",
@@ -15,11 +14,11 @@ import PurchasePlanDetailsEdit from './pages/PurchasePlan/PurchasePlanDetails/Pu
     },
     {
       path:"/add",
-      element:<PurchasePlanDetailsAdd/>
+      element:<PurchasePlanDetailsAddEdit/>
     },
     {
       path:"/edit/:id",
-      element:<PurchasePlanDetailsEdit/>
+      element:<PurchasePlanDetailsAddEdit/>
     },
 
   ]

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.add-product-container {
+.add-edit-product-container {
   display: flex;
   justify-content: center;
   /* Căn giữa theo chiều ngang */
@@ -8,14 +8,14 @@
   background-color: #f5f5f5;
   /* Màu nền để làm nổi bật form */
 }
-.add-product-container h2 {
+.add-edit-product-container h2 {
   padding-left: 13px;
   padding-top: 10px;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
 }
-.add-product-container .add-product-form {
+.add-edit-product-container .add-edit-product-form {
   /* Đường viền nhẹ xung quanh */
   background-color: #fff;
   /* Màu nền trắng cho form */
@@ -32,31 +32,31 @@
   /* Giới hạn chiều rộng tối đa của form */
   /* Để form có nền mờ */
 }
-.add-product-container .add-product-form .ant-form-item {
+.add-edit-product-container .add-edit-product-form .ant-form-item {
   margin-bottom: 16px;
 }
-.add-product-container .add-product-form .ant-form-item label {
+.add-edit-product-container .add-edit-product-form .ant-form-item label {
   font-weight: 500;
   font-size: 14px;
 }
-.add-product-container .add-product-form .ant-form-item input,
-.add-product-container .add-product-form .ant-form-item .ant-select-selector,
-.add-product-container .add-product-form .ant-form-item .ant-picker {
+.add-edit-product-container .add-edit-product-form .ant-form-item input,
+.add-edit-product-container .add-edit-product-form .ant-form-item .ant-select-selector,
+.add-edit-product-container .add-edit-product-form .ant-form-item .ant-picker {
   border-radius: 5px;
   height: 40px;
 }
-.add-product-container .add-product-form .ant-form-item .ant-select-selector {
+.add-edit-product-container .add-edit-product-form .ant-form-item .ant-select-selector {
   display: flex;
   align-items: center;
 }
-.add-product-container .add-product-form .ant-form-item input[type=number] {
+.add-edit-product-container .add-edit-product-form .ant-form-item input[type=number] {
   width: 100%;
   padding: 8px;
 }
-.add-product-container .add-product-form .ant-picker {
+.add-edit-product-container .add-edit-product-form .ant-picker {
   width: 100%;
 }
-.add-product-container .add-product-form .ant-btn-primary {
+.add-edit-product-container .add-edit-product-form .ant-btn-primary {
   width: 100%;
   background-color: #1890ff;
   border-color: #1890ff;
@@ -67,7 +67,7 @@
   border-radius: 5px;
   margin-top: 10px;
 }
-.add-product-container .add-product-form .ant-btn-primary:hover {
+.add-edit-product-container .add-edit-product-form .ant-btn-primary:hover {
   background-color: #40a9ff;
   border-color: #40a9ff;
 }/*# sourceMappingURL=PurchasePlanDetailsAdd.css.map */
